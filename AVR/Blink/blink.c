@@ -4,20 +4,20 @@
 
 int main (void)
 {
- /* set pin 5 of PORTB for output*/
- DDRB |= _BV(DDB5);
+ /* set pin 0 of PORTC for output*/
+ DDRC |= _BV(DDC0);
 
 
 
 
  while(1) {
 
-  /* set pin 5 high to turn led on */
-  PORTB |= _BV(PORTB5);
+  /* set pin 0 high to turn led on */
+  PORTC |= _BV(PORTC0);
   _delay_ms(1000); //delay 1 second
 
-  /* set pin 5 low to turn led off */
-  PORTB &= ~_BV(PORTB5);
+  /* set pin 0 low to turn led off */
+  PORTC &= ~_BV(PORTC0);
   _delay_ms(1000); //delay 1 second.
  }
  }
